@@ -13,7 +13,7 @@ component that will change what it displays based on state.
 
 ## Updating state
 
-![Unknown state](https://media.giphy.com/media/fFIaNdVhdvoOc/giphy.gif)
+<!-- ![Unknown state](https://media.giphy.com/media/fFIaNdVhdvoOc/giphy.gif) -->
 
 While a React component can have initial state, the real power is in updating
 its state — after all, if we didn't need to update the state, the component
