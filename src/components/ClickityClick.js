@@ -1,1 +1,1 @@
-// Code ClickityClick Component Here
+pointless lesson
