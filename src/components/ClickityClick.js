@@ -6,21 +6,22 @@ class ClickityClick extends React.Component {
     constructor() {
         super()
         this.state = {
-            hasBeenClicked: false
+           count: 0
         };
     }
 
     handleClick = () => {
+        let newCount = this.state.count + 1
         this.setState({
-            hasBeenClicked: true
-        });
-        console.log(this.state.hasBeenClicked);
+            count: newCount
+        }, () => console.log(this.state.count));
+        console.log(this.state.count);
     }
 
     render() {
         return(
             <div>
-                <p>I have {this.state.hasBeenClicked ? null : "not" } been clicked!</p>
+                <p>I have been clicked {this.state.count} times!</p>
                 <button onClick={this.handleClick} >click me!</button>
             </div>
         )
