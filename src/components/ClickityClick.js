@@ -5,7 +5,8 @@ export default class ClickityClick extends Component {
     constructor(props) {
         super(props)
         this.state={
-            hasBeenClicked: false
+            // hasBeenClicked: false
+            toggled: true
         }
     }
 
@@ -17,16 +18,22 @@ export default class ClickityClick extends Component {
         //     hasBeenClicked: true
         // })
         // console.log(this.state.hasBeenClicked); // prints false
-        this.setState({
-            hasBeenClicked: true
-          }, () => console.log(this.state.hasBeenClicked)) // prints true
+        // this.setState({
+        //     hasBeenClicked: true
+        //   }, () => console.log(this.state.hasBeenClicked)) // prints true
+        this.setState( previousState => {
+            return {
+                toggled: !previousState.toggled
+            }
+        })
     }
 
     render () {
         return (
         <div>
-        <p>I have {this.state.hasBeenClicked ? null : 'not'} been clicked!</p>
-        <button onClick={this.handleClick}>Click Me!</button>
+        {/* <p>I have {this.state.hasBeenClicked ? null : 'not'} been clicked!</p>
+        <button onClick={this.handleClick}>Click Me!</button> */}
+        <button onClick={this.handleClick}>{this.state.toggled ? "ON" : "OFF"}</button>
         </div>
         )
     }
