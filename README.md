@@ -1,4 +1,4 @@
-# React Updating State
+## React Updating State
 
 ## Overview
 
